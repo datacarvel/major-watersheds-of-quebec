@@ -111,14 +111,6 @@ hcl.pals("qualitative")
 
 pp
 
-###VOIR DÉFINITION EXACTE DANS TUTORIEL
-###VOIR DÉFINITION EXACTE DANS TUTORIEL
-###VOIR DÉFINITION EXACTE DANS TUTORIEL
-###VOIR DÉFINITION EXACTE DANS TUTORIEL
-###VOIR DÉFINITION EXACTE DANS TUTORIEL
-###VOIR DÉFINITION EXACTE DANS TUTORIEL
-###VOIR DÉFINITION EXACTE DANS TUTORIEL
-
 pp1 <- ggplot() +
   #geom_sf(
   #  data = quebec_basins_lamb,
@@ -174,33 +166,3 @@ ggsave(
   width = 4, height = 7, dpi = 600,
   bg = "black", device = "png", pp1
 )
-
-###VOIR DÉFINITION EXACTE DANS TUTORIEL
-###VOIR DÉFINITION EXACTE DANS TUTORIEL
-###VOIR DÉFINITION EXACTE DANS TUTORIEL
-###VOIR DÉFINITION EXACTE DANS TUTORIEL
-###VOIR DÉFINITION EXACTE DANS TUTORIEL
-###VOIR DÉFINITION EXACTE DANS TUTORIEL
-
-
-###
-
-######
-
-
-#### NOT ACTIVE
-#### NOT WORKING - try this https://chat.deepseek.com/a/chat/s/ee36ebe3-715e-4377-a484-b7f58ef72e76 in Chrome
-
-na_ar_rivers_lamb <- st_transform(na_ar_rivers, st_crs(quebec_shape))
-
-quebec_rivers_lamb <- na_ar_rivers_lamb |> # rivers and quebec in Lamb = don't work
-  dplyr::select(
-    ORD_FLOW
-  ) |>
-  sf::st_intersection(
-    intersection_qc_lamb
-  )
-
-
-
-
